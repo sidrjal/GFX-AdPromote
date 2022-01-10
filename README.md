@@ -88,7 +88,7 @@ In your Java code, you can initialize your banner view and get listener, you can
         });
 ```
 ## Banner Promote Example
-![Banner Promote Example](https://raw.githubusercontent.com/saidmotya/GFX-AdPromote/master/ScreenShot/bannerPromo.gif)
+![Banner Promote Example](https://github.com/saidmotya/GFX-AdPromote/blob/master/ScreenShot/banner_promo.gif)
 
 
 
@@ -204,4 +204,7 @@ When our lib initialize successful and check the interstitial is loaded than sho
 ```
 ## Interstitial Promote Example
 ![Interstitial Promote Example](https://raw.githubusercontent.com/saidmotya/GFX-AdPromote/master/ScreenShot/interstitialPromo.gif)
+
+ 
+
 
