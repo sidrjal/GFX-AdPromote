@@ -88,4 +88,4 @@ In your Java code, you can initialize your banner view and get listener, you can
         });
 ```
 ## BannerPromote Example
-![BannerPromote Example](https://raw.githubusercontent.com/saidmotya/GFX-AdPromote/master/ScreenShot/bannerPromo.gif)
+![BannerPromote Example](https://raw.githubusercontent.com/saidmotya/GFX-AdPromote/master/ScreenShot/banner_promo.gif)
