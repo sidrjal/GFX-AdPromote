@@ -22,7 +22,7 @@ dependencies {
 ```
 
 ## Initialize
-In your Java code, you can initialize the library with two way : inside splash with param Activity and check if the lib is connected than start the normal activity Or in MyApplication extend Application with param Context, see the full code source to more understand :
+In your Java code, you can initialize the library with two way : inside splash with param Activity and check if the lib is connected than start the normal activity Or in MyApplication extend Application with param Context, see the full code source for more details :
 ```java
 AppPromote.initializePromote(this,"Your link json her");
         AppPromote.setOnPromoteListener(new OnPromoteListener() {
