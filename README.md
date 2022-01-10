@@ -205,6 +205,29 @@ When our lib initialize successful and check the interstitial is loaded than sho
 ## Interstitial Promote Example
 ![Interstitial Promote Example](https://raw.githubusercontent.com/saidmotya/GFX-AdPromote/master/ScreenShot/interstitialPromo.gif)
 
- 
+
+## Help Maintenance
+If you could help me to continue maintain this repo, buying me a cup of coffee will make my life really happy and get much energy out of it.
+
+<a href="https://www.buymeacoffee.com/saidmotya" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/purple_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
 
+
+ ## Thanks :
+* The **Glide Lib** for display images. [Visit](https://github.com/bumptech/glide)
+* The **Dotsindicator Lib** for indicator viewPager. [Visit](https://github.com/tommybuonomo/dotsindicator)
+
+## License
+    Copyright 2022 SAID MOTYA
+    
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+        http://www.apache.org/licenses/LICENSE-2.0
+    
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
