@@ -39,7 +39,7 @@ AppPromote.initializePromote(this,"Your link json her");
 ```
 
 
-## How to use BannerPromote :
+## How to use Banner Promote :
 Place your banner promote in your xml layout like this:
 ```xml
  <com.gfx.adPromote.BannerPromote
@@ -53,7 +53,7 @@ Place your banner promote in your xml layout like this:
         />
 ```
 
-#### BannerPromote Custom Attributes
+#### Banner Promote Custom Attributes
 | Attribute | Description |
 | --- | --- |
 | `banner_bodyColor` | Color of the banner body (by default is white) |
@@ -62,7 +62,7 @@ Place your banner promote in your xml layout like this:
 | `banner_installTitle` | Title of button : default is "Install" |
 
 
-## BannerPromote in Javacode :
+## Banner Promote in Java code :
 In your Java code, you can initialize your banner view and get listener, you can make the attributes of banner progrmatically or in xml layout :
 ```java
  BannerPromote bannerPromote = findViewById(R.id.banner_view);
@@ -87,5 +87,121 @@ In your Java code, you can initialize your banner view and get listener, you can
             }
         });
 ```
-## BannerPromote Example
-![BannerPromote Example](https://raw.githubusercontent.com/saidmotya/GFX-AdPromote/master/ScreenShot/banner_promo.gif)
+## Banner Promote Example
+![Banner Promote Example](https://raw.githubusercontent.com/saidmotya/GFX-AdPromote/master/ScreenShot/bannerPromo.gif)
+
+
+
+## How to use Native promote :
+Place your native promote in your xml layout like this:
+```xml
+ <com.gfx.adPromote.NativePromote
+        android:id="@+id/native_ad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:native_installColor="#4CAF50"
+        app:native_installRadius="5"
+        app:native_installTitle="Install" />
+```
+
+#### Native Promote Custom Attributes
+| Attribute | Description |
+| --- | --- |
+| `native_installTitle` | Title button of native, default : "Install" |
+| `native_installColor` | Color of the button native (by default color : blue) |
+| `native_contentColor` | Content color (Title of the app and description) |
+| `native_bodyColor` | Native Body background color : white is the default |
+| `native_installRadius` | Raduis of button install : corner of button, defualt is 20px |
+
+
+## Native Promote in Java code :
+In your Java code, you can initialize your native view and get listener :
+```java
+ NativePromote nativePromote = findViewById(R.id.native_ad);
+        nativePromote.setButtonColor("#1C7DCA");
+        nativePromote.setButtonTitle("Play Now");
+        nativePromote.setRadiusButton(10);  //corner of button radius.
+        nativePromote.setOnNativeListener(new OnNativeListener() {
+            @Override
+            public void onNativeAdLoaded() {
+                //Native loaded.
+            }
+
+            @Override
+            public void onNativeAdClicked() {
+                //Native clicked.
+            }
+
+            @Override
+            public void onNativeAdFailedToLoad(String error) {
+                //"Native failed to load
+            }
+        });
+```
+## Native Promote Example
+![Native Promote Example](https://raw.githubusercontent.com/saidmotya/GFX-AdPromote/master/ScreenShot/nativePromo.png)
+
+
+## Interstitial Promote in Java code :
+Initialize the interstitial promote inside your code and get more controller the attributes programmatically :
+```java
+  InterstitialPromote interstitialPromote = new InterstitialPromote(MainActivity.this);
+        interstitialPromote.setStyle(InterstitialStyle.Advance);
+        interstitialPromote.setInstallColor(R.color.my_color); //color of button from resource.
+        //interstitialAd.setInstallColor("#E91E63"); //color of button from string.
+        interstitialPromote.setTimer(5);//5 second to closed the Ad.
+        interstitialPromote.setInstallTitle("Play Now");
+        interstitialPromote.setRadiusButton(10); //corner of button radius.
+        interstitialPromote.setOnInterstitialAdListener(new OnInterstitialAdListener() {
+            @Override
+            public void onInterstitialAdLoaded() {
+                //interstitialAd loaded.
+            }
+
+            @Override
+            public void onInterstitialAdClosed() {
+                //interstitialAd closed.
+            }
+
+            @Override
+            public void onInterstitialAdClicked() {
+                //interstitialAd clicked.
+            }
+
+            @Override
+            public void onInterstitialAdFailedToLoad(String error) {
+                //Interstitial failed to load
+            }
+        });
+
+```
+Attributes programmatically for the `InterstitialPromote`:
+* `setStyle` Style of interstitial containt 2 style : InterstitialStyle.Advance or InterstitialStyle.Standard.
+* `setInstallColor` Color of install ad button : blue is default color.
+* `setTimer` CountDown time in Close button, you can make any time to block the close button : default is 0 (hide countDown). 
+* `setInstallTitle` Title of install button : default is "Install".
+* `setRadiusButton` Raduis of button install : corner of button, defualt is 20px.
+
+## Showing Interstitial Promote :
+When our lib initialize successful and check the interstitial is loaded than show him, if not start normal activity, check the code below :
+```java
+ //check if the interstitial is loaded yet.
+                if (interstitialPromote.isAdLoaded()) {
+
+                    interstitialPromote.show(); //call showing interstitial
+                    //when user close the interstitial ad, start the next activity.
+                    interstitialPromote.setOnAdClosed(new OnAdClosed() {
+                        @Override
+                        public void onAdClosed() {
+                            //your intent
+                            //start your Activity
+                        }
+                    });
+                } else {
+                    //your intent : when ad is not ready yet.
+                    //start your Activity
+                }
+```
+## Interstitial Promote Example
+![Interstitial Promote Example](https://raw.githubusercontent.com/saidmotya/GFX-AdPromote/master/ScreenShot/interstitialPromo.gif)
+
